@@ -31,3 +31,58 @@ B-дерево — это сбалансированное дерево поис
 | 5 | Performance | Вставка 10 000 ключей |
 | 6 | Real-world Example | База данных студентов |
 
+## Ожидаемый вывод
+============================================
+     B-TREE IMPLEMENTATION
+============================================
+
+========================================
+  TEST 1: BASIC OPERATIONS
+========================================
+  [PASS] Create B-tree
+
+Inserting keys: 10 20 30 40 50 25 15 35 45 5
+
+Tree structure:
+B-Tree (t=3, max_keys=5):
+[30]
+  [5, 10, 15, 20, 25] (leaf)
+  [35, 40, 45, 50] (leaf)
+
+Search tests:
+  [PASS] Found key 10
+  [PASS] Found key 20
+  ...
+  [PASS] Key 100 NOT found
+
+Statistics:
+  Height: 2
+  Total keys: 10
+  [PASS] All 10 keys inserted
+
+...
+
+========================================
+  TEST 6: REAL-WORLD EXAMPLE (DICTIONARY)
+========================================
+
+Student ID database:
+  Inserted ID: 1001
+  Inserted ID: 1002
+  ...
+
+Tree structure:
+B-Tree (t=3, max_keys=5):
+[1003, 1006]
+  [1001, 1002] (leaf)
+  [1004, 1005] (leaf)
+  [1007, 1008, 1009, 1010] (leaf)
+
+Search tests:
+  [PASS] Student 1001 found
+  [PASS] Student 1002 found
+  ...
+
+============================================
+           ALL TESTS PASSED!
+============================================
